@@ -18,7 +18,12 @@ async def ping(ctx):
     await ctx.send('pong')
 bot.run(token)
 
-@bot.command()
-async def こんにちは(ctx):
-    await ctx.send('こんにちは～！')
-bot.run(token)
+# メッセージ受信時に動作する処理
+@client.event
+async def on_message(message):
+    # メッセージ送信者がBotだった場合は無視する
+    if message.author.bot:
+        return
+    # 「/neko」と発言したら「にゃーん」が返る処理
+    if message.content == '/ねこ':
+        await message.channel.send('にゃーん')

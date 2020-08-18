@@ -27,3 +27,9 @@ async def on_message(message):
     # 「/neko」と発言したら「にゃーん」が返る処理
     if message.content == '/neko':
         await message.channel.send('にゃーん')
+
+       
+@bot.command()
+async def こんにちは(ctx):
+    await ctx.send('こんちゃああああ')
+bot.run(token)

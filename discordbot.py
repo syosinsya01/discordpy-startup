@@ -30,6 +30,6 @@ async def on_message(message):
 
        
 @bot.command()
-async def こんにちは(ctx):
-    await ctx.send('こんちゃああああ')
+async def hello(ctx):
+    await ctx.send('hellooooooo')
 bot.run(token)

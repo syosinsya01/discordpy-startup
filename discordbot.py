@@ -18,6 +18,11 @@ async def ping(ctx):
     await ctx.send('pong')
 bot.run(token)
 
+@bot.command()
+async def hello(ctx):
+    await ctx.send('hellooooo')
+bot.run(token)
+
 # メッセージ受信時に動作する処理
 @client.event
 async def on_message(message):
@@ -29,7 +34,3 @@ async def on_message(message):
         await message.channel.send('にゃーん')
 
        
-@bot.command()
-async def hello(ctx):
-    await ctx.send('hellooooooo')
-bot.run(token)
